@@ -20,7 +20,7 @@ catch() -> Se ejecuta cuando la promesa NO se resuelve. (Aquí obtenemos el erro
 const promise = new Promise((resolve, reject) => {
     setTimeout(() => {
         let operationSuccessful = true;
-        if(!operationSuccessful){
+        if(operationSuccessful){
             resolve("La operación fue exitosa!");
         } else {
             reject("Falló la operación");
@@ -29,3 +29,11 @@ const promise = new Promise((resolve, reject) => {
 })
 
 // console.log(promise)
+
+promise
+    .then((successMessage) => {
+        console.log(successMessage);
+    })
+    .catch((errorMessage) => {
+        console.log(errorMessage)
+    });
