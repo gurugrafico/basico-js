@@ -55,4 +55,12 @@ async function createPost(title, content) {
     body: body,
     userId: userId,
   };
+
+  sendHTTPRequest("POST", "https://jsonplaceholder.typicode.com/posts", post);
 }
+
+form.addEventListener("submit", (event) => {
+  event.preventDefault();
+  const title = event.currentTarget.querySelector("#title").value;
+  const content = event.currentTarget.querySelector("#content");
+});
