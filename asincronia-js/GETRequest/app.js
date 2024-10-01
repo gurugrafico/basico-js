@@ -46,4 +46,13 @@ async function fetchPosts() {
   }
 }
 
-fetchButton.addEventListener("click", fecthPosts);
+fetchButton.addEventListener("click", fetchPosts);
+
+async function createPost(title, content) {
+  const userId = Math.random();
+  const post = {
+    title: title,
+    body: body,
+    userId: userId,
+  };
+}
