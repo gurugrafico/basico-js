@@ -16,7 +16,7 @@ function sendHTTPRequest(method, url, data) {
   });
 }
 
-async function fecthPosts() {
+async function fetchPosts() {
   const responseData = await sendHTTPRequest(
     "GET",
     "https://jsonplaceholder.typicode.com/posts"
