@@ -52,7 +52,7 @@ async function createPost(title, content) {
   const userId = Math.random();
   const post = {
     title: title,
-    body: body,
+    body: content,
     userId: userId,
   };
 
@@ -62,5 +62,7 @@ async function createPost(title, content) {
 form.addEventListener("submit", (event) => {
   event.preventDefault();
   const title = event.currentTarget.querySelector("#title").value;
-  const content = event.currentTarget.querySelector("#content");
+  const content = event.currentTarget.querySelector("#content").value;
+
+  createPost(title, content);
 });
